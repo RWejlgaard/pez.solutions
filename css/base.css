@@ -60,6 +60,8 @@
     flex: 4;
     font-family: Roboto, Arial, sans-serif;
     text-align: left;
+    color: white;
+    background-color: #000;
     /* Add this line to center the text inside the content column */
     padding-left: 10%;
     padding-right: 10%;
