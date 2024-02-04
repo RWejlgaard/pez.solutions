@@ -59,6 +59,10 @@
     text-decoration: none;
 }
 
+.sidemenu a:hover {
+    color: violet;
+}
+
 .content {
     flex: 4;
     font-family: -apple-system, Roboto, Arial, sans-serif;
