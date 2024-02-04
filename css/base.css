@@ -1,5 +1,6 @@
+
 .base {
-    font-family: Roboto, Arial, sans-serif;
+    font-family: -apple-system, Roboto, Arial, sans-serif;
     /* Replace with a modern font name */
     font-size: 16px;
     line-height: 1.5;
@@ -10,7 +11,7 @@
 }
 
 .smooth-text {
-    font-family: Roboto, Arial, sans-serif;
+    font-family: -apple-system, Roboto, Arial, sans-serif;
     /* Replace with a modern font name */
     font-size: 16px;
     line-height: 1.5;
@@ -39,6 +40,7 @@
     /* Change the foreground color to white */
     padding: 10px;
     font-size: 12px;
+    font-family: -apple-system, Roboto, Arial, sans-serif;
     text-align: left;
     padding-left: 5%;
     /* Add this line to right align the sidemenu */
@@ -51,7 +53,7 @@
 
 .sidemenu a {
     display: block;
-    font-family: Roboto, Arial, sans-serif;
+    font-family: -apple-system, Roboto, Arial, sans-serif;
     margin-bottom: 10px;
     color: white;
     text-decoration: none;
@@ -59,7 +61,7 @@
 
 .content {
     flex: 4;
-    font-family: Roboto, Arial, sans-serif;
+    font-family: -apple-system, Roboto, Arial, sans-serif;
     text-align: left;
     color: white;
     background-color: #000;
