@@ -1,17 +1,25 @@
-.smooth-text {
-    font-family: Roboto, Arial, sans-serif; /* Replace with a modern font name */
+.base {
+    font-family: Roboto, Arial, sans-serif;
+    /* Replace with a modern font name */
     font-size: 16px;
     line-height: 1.5;
-    color: #fff; /* Change color to white */
+    background-color: #000;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    transition: color 0.3s ease-in-out;
+}
+
+.smooth-text {
+    font-family: Roboto, Arial, sans-serif;
+    /* Replace with a modern font name */
+    font-size: 16px;
+    line-height: 1.5;
     /* background-color: #000; Add background color */
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
     transition: color 0.3s ease-in-out;
     border-radius: 5px;
 }
 
-.smooth-text:hover {
-    color: #fff;
-}
 
 .container {
     display: flex;
@@ -29,9 +37,15 @@
     color: white;
     /* Change the foreground color to white */
     padding: 10px;
+    font-size: 12px;
     text-align: left;
     padding-left: 5%;
     /* Add this line to right align the sidemenu */
+}
+
+.sidemenu ul {
+    list-style-type: none;
+    padding-left: 10px;
 }
 
 .sidemenu a {
@@ -48,4 +62,16 @@
     text-align: left;
     /* Add this line to center the text inside the content column */
     padding-left: 10%;
+    padding-right: 10%;
+}
+
+.content a {
+    color: violet;
+    text-decoration: none;
+}
+
+.content code {
+    background-color: #2e2e2e;
+    border-radius: 5px;
+    padding: 2px;
 }
