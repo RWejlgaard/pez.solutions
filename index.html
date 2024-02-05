@@ -3,21 +3,49 @@
 
 <head>
     <link rel="stylesheet" href="/css/base.css">
+    <style>
+        .container {
+            transition: transform 0.3s ease;
+        }
+
+        .container.open {
+            transform: translateX(150px);
+        }
+    </style>
     <title>Pez Solutions</title>
 </head>
 
 <body class="base">
-    <div class="container">
-        <div class="sidemenu">
-            <p>Links</p>
-            <ul style="list-style-type: none;">
+    <nav role="navigation">
+        <div id="menuToggle">
+            <!--
+          A fake / hidden checkbox is used as click reciever,
+          so you can use the :checked selector on it.
+          -->
+            <input type="checkbox" />
+
+            <!--
+          Some spans to act as a hamburger.
+          
+          They are acting like a real hamburger,
+          not that McDonalds stuff.
+          -->
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <!--
+          Too bad the menu has to be inside of the button
+          but hey, it's pure CSS magic.
+          -->
+            <ul id="menu">
                 <li><a href="/how-to-connect">How to access</a></li>
                 <li><a href="/services">Services</a></li>
                 <li><a href="/legal">Legal</a></li>
             </ul>
-            <!-- <a href="/how-to-connect">How to access</a> -->
         </div>
-
+    </nav>
+    <div class="container">
         <div class="content">
             <h1 id="connecting-to-services">Pez Solutions</h1>
 
@@ -62,6 +90,14 @@
 
         </div>
     </div>
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const container = document.querySelector('.container');
+
+        menuToggle.addEventListener('click', () => {
+            container.classList.toggle('open');
+        });
+    </script>
 </body>
 
 </html>
