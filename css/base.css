@@ -32,6 +32,26 @@
     /* Add this line to set the height of the container */
 }
 
+.table-outline {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #fff;
+}
+
+.table-outline th {
+    border: 1px solid #fff;
+    padding: 8px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.table-outline td {
+    border: 1px solid #fff;
+    padding: 8px;
+    text-align: left;
+    font-size: 14px;
+}
+
 .sidemenu {
     flex: 1;
     background-color: black;
