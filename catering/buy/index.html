@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="/css/base.css">
+    <title>Catering</title>
+</head>
+
+<body class="base">
+    <div class="container">
+        <div class="sidemenu">
+            <a href="/" style="color: violet">Home</a>
+            <a href="/catering" style="color: white">Back to catering</a>
+        </div>
+        <div class="content">
+            <h1>Food Service - Buy</h1>
+
+            <script async
+                src="https://js.stripe.com/v3/buy-button.js">
+            </script>
+
+            <h2>Ordering</h2>
+
+            <p>
+                Orders must be placed by 1 PM the day before.</br>
+            </p>
+
+            <h2>Single Day</h2>
+            <p>Note: Please make sure to select the correct quantity and put the selected days in the "Which days do you want?" field.</p>
+            <stripe-buy-button buy-button-id="buy_btn_1P0988P38h4Q0mdVHciy4544" publishable-key="pk_live_51P08KBP38h4Q0mdVrAJpILTh3k862UzMFd6kTrGmUTmdWeRzCh1ob8POYYaDFuT0IAH4lT1DREpJ8xCc5kVwwDSw00KXkDUaJM"></stripe-buy-button>
+            
+            <h2>Weekly</h2>
+            <stripe-buy-button buy-button-id="buy_btn_1P092NP38h4Q0mdVDoGRWfg8" publishable-key="pk_live_51P08KBP38h4Q0mdVrAJpILTh3k862UzMFd6kTrGmUTmdWeRzCh1ob8POYYaDFuT0IAH4lT1DREpJ8xCc5kVwwDSw00KXkDUaJM"></stripe-buy-button>
+            
+        </div>
+    </div>
+</body>
+
+</html>
