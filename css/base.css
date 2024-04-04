@@ -52,6 +52,26 @@
     font-size: 14px;
 }
 
+.table-active {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ee82ee;
+}
+
+.table-active th {
+  border: 1px solid #ee82ee;
+  padding: 8px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.table-active td {
+  border: 1px solid #ee82ee;
+  padding: 8px;
+  text-align: left;
+  font-size: 14px;
+}
+
 .sidemenu {
     flex: 1;
     background-color: black;
