@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="/css/base.css">
+    <title>Pez Solutions</title>
+</head>
+
+<body class="base">
+    <div class="container">
+        <div class="sidemenu">
+            <a href="/" style="color: violet">Home</a>
+            <a href="/rca">Back to RCA</a>
+        </div>
+
+        <div class="content">
+            <h1>2024-04-15 - ZFS Pool Suspended - Part 2</h1>
+
+            <h2>What went wrong?</h2>
+            <p>The ZFS pool was suspended.</p>
+            <p>All media related services unavailable and unable to auto-correct.</p>
+
+            <h2>Timeline</h2>
+            <table class="table-outline">
+                <tr>
+                    <th>Time</th>
+                    <th>Event</th>
+                </tr>
+                <tr>
+                    <td>05:16 BST</td>
+                    <td>Pool suspended</td>
+                </tr>
+                <tr>
+                    <td>05:17 BST</td>
+                    <td>Page recieved after transmission service crashed due to I/O issues</td>
+                </tr>
+                <tr>
+                    <td>08:50 BST</td>
+                    <td>2 disks in "FAULTED (corrupted)" state in VDev 1, 2 disks in "FAULTED (1 corrupted, 1 invalid label)" state in VDev 2</td>
+                </tr>
+                <tr>
+                    <td>08:55 BST</td>
+                    <td>Cables and drives for VDev 1 and 2 was changed to another row in backplane. Server restarted. No change in state</td>
+                </tr>
+                <tr>
+                    <td>18:30 BST</td>
+                    <td>Drives checked one by one, 2 identified as "dying"</td>
+                </tr>
+                <tr>
+                    <td>19:20 BST</td>
+                    <td>138K data errors on Pool</td>
+                </tr>
+                <tr>
+                    <td>20:00 BST</td>
+                    <td>512K data errors on Pool</td>
+                </tr>
+                <tr>
+                    <td>20:13 BST</td>
+                    <td>Lost hope</td>
+                </tr>
+                <tr>
+                    <td>April 20th - 20:43 BST</td>
+                    <td>Server taken offline for reseating connectors</td>
+                </tr>
+                <tr>
+                    <td>April 20th - 20:50 BST</td>
+                    <td>While reconnecting the HBA to the motherboard a bent PCI bracket was found. Screwing the PCI bracket down causes the HBA to tilt upwards - causing broken connections</td>
+                </tr>
+                <tr>
+                    <td>April 20th - 20:51 BST</td>
+                    <td>London-B rebooted without HBA being screwed down</td>
+                </tr>
+                <tr>
+                    <td>April 20th - 20:55 BST</td>
+                    <td>All VDevs reporting healthy in ZFS</td>
+                </tr>
+                <tr>
+                    <td>April 20th - 21:05 BST</td>
+                    <td>1 drive from VDev 2 in "REPAIRING" state. Checksum errors for <code>sde</code> increasing. (This is normal for repairing ZFS)</td>
+                </tr>
+                <tr>
+                    <td>April 20th - 22:10 BST</td>
+                    <td>Incident declared over</td>
+                </tr>
+                </table>
+
+
+            <h2>Resolution</h2>
+            <p>ZFS Pool suspended due to a misaligned PCI connector on the HBA. A bent PCI bracket caused the card to tilt upwards in the back when the card was screwed in.</p>
+            <p>After the card was reseated without the bracket <i>not</i> being screwed in, the pool was brought back online.</p>
+            <p>1 drive from VDev 2 was in "REPAIRING" state. The drive has since stabilized and is now reporting no errors.</p>
+
+            <h2>Corrective Actions</h2>
+            <ul>
+                <li>HBA PCI bracket to be replaced</li>
+                <li>HBA PCI bracket to be screwed in after replacement</li>
+            </ul>
+
+            <h2>Related Images</h2>
+            <img src="/rca/2024-04-19/img/bent-bracket.jpeg" alt="Bent PCI Bracket" style="width: 75%;">
+        </div>
+    </div>
+</body>
+
+</html>
