@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="/css/base.css">
+    <title>Pez Solutions</title>
+</head>
+
+<body class="base">
+    <div class="container">
+        <div class="sidemenu">
+            <a href="/" style="color: violet">Home</a>
+            <a href="/rca">Back to RCA</a>
+        </div>
+
+        <div class="content">
+            <h1>2024-06-13 - London location internet services down. Some services unavailable</h1>
+
+            <h2>What went wrong?</h2>
+            <p>At 20:40 BST. The internet connection at the London location went down. This caused some services to be unavailable.</p>
+
+            <h2>Impact</h2>
+            <p>Some services were unavailable for 10 minutes. The services affected were:</p>
+            <ul>
+                <li>Plex</li>
+                <li>Jellyfin</li>
+                <li>public.pez.sh</li>
+                <li>Grafana</li>
+                <li>Radarr</li>
+                <li>Sonarr</li>
+                <li>Transmission</li>
+                <li>request.pez.sh</li>
+                <li>jellyfin-requests.pez.sh</li>
+                <li>Minecraft Server</li>
+                <li>World of Warcraft Server</li>
+
+            </ul>
+
+            <h2>Timeline</h2>
+            <table class="table-outline">
+                <tr>
+                    <th>Time</th>
+                    <th>Event</th>
+                </tr>
+                <tr>
+                    <td>20:40 BST</td>
+                    <td>ISP Connection is interrupted</td>
+                </tr>
+                <tr>
+                    <td>20:42 BST</td>
+                    <td>Page recieved from Pagerduty dead mans switch</td>
+                </tr>
+                <tr>
+                    <td>20:44 BST</td>
+                    <td>Router restarted</td>
+                </tr>
+                <tr>
+                    <td>20:46 BST</td>
+                    <td>While starting up router started an automatic update. <i>Very</i> poor timing.</td>
+                </tr>
+                <tr>
+                    <td>20:49 BST</td>
+                    <td>Update finished and connection was restored</td>
+                </tr>
+                <tr>
+                    <td>20:50 BST</td>
+                    <td>Services available</td>
+                </tr>
+                </table>
+
+            <h2>Root Cause</h2>
+            <p>
+                Unclear. The ISP has not provided a reason for the outage. The router was restarted and an update was applied. This may have been the cause of the issue.
+            </p>
+
+            <h2>Resolution</h2>
+            <p>The router was restarted and an update was applied. This resolved the issue.</p>
+
+            <h2>Corrective Actions</h2>
+            <p>None at this time</p>
+
+            <h2>Supporting Information</h2>
+            <img src="img/data-transfer.png".png" alt="Grafana Dashboard" style="width: 100%; max-width: 800px;">
+            <img src="img/unifi-logs.png" alt="Router" style="width: 100%; max-width: 800px;">
+        </div>
+    </div>
+</body>
+
+</html>
