@@ -1,132 +1,107 @@
-
-.base {
-    font-family: -apple-system, Roboto, Arial, sans-serif;
-    /* Replace with a modern font name */
-    font-size: 16px;
-    line-height: 1.5;
-    background-color: #000;
-    color: #fff;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-    transition: color 0.3s ease-in-out;
+/* Base styles */
+.base, .smooth-text {
+  font-family: -apple-system, Roboto, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #000;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  transition: color 0.3s ease-in-out;
 }
 
 .smooth-text {
-    font-family: -apple-system, Roboto, Arial, sans-serif;
-    /* Replace with a modern font name */
-    font-size: 16px;
-    line-height: 1.5;
-    background-color: #000;
-    color: #fff;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-    transition: color 0.3s ease-in-out;
-    border-radius: 5px;
+  border-radius: 5px;
 }
 
-
+/* Container styles */
 .container {
-    display: flex;
-    justify-content: center;
-    overflow-y: scroll;
-    /* Add this line to enable vertical scrolling */
-    height: 100vh;
-    /* Add this line to set the height of the container */
+  display: flex;
+  justify-content: center;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+/* Table styles */
+.table-outline, .table-active {
+  border-collapse: collapse;
+  width: 100%;
 }
 
 .table-outline {
-    border-collapse: collapse;
-    width: 100%;
-    border: 1px solid #fff;
+  border: 1px solid #fff;
 }
 
-.table-outline th {
-    border: 1px solid #fff;
-    padding: 8px;
-    text-align: left;
-    font-size: 14px;
+.table-outline th, .table-outline td,
+.table-active th, .table-active td {
+  border: 1px solid;
+  padding: 8px;
+  text-align: left;
+  font-size: 14px;
 }
 
-.table-outline td {
-    border: 1px solid #fff;
-    padding: 8px;
-    text-align: left;
-    font-size: 14px;
+.table-outline th, .table-outline td {
+  border-color: #fff;
 }
 
 .table-active {
-  border-collapse: collapse;
-  width: 100%;
   border: 1px solid #ee82ee;
 }
 
-.table-active th {
-  border: 1px solid #ee82ee;
-  padding: 8px;
-  text-align: left;
-  font-size: 14px;
+.table-active th, .table-active td {
+  border-color: #ee82ee;
 }
 
-.table-active td {
-  border: 1px solid #ee82ee;
-  padding: 8px;
-  text-align: left;
-  font-size: 14px;
-}
-
+/* Sidemenu styles */
 .sidemenu {
-    flex: 1;
-    background-color: black;
-    /* Change the background color to black */
-    color: white;
-    /* Change the foreground color to white */
-    padding: 10px;
-    font-size: 12px;
-    font-family: -apple-system, Roboto, Arial, sans-serif;
-    text-align: left;
-    padding-left: 5%;
-    /* Add this line to right align the sidemenu */
+  flex: 1;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  font-size: 12px;
+  font-family: -apple-system, Roboto, Arial, sans-serif;
+  text-align: left;
+  padding-left: 5%;
 }
 
 .sidemenu ul {
-    list-style-type: none;
-    padding-left: 10px;
+  list-style-type: none;
+  padding-left: 10px;
 }
 
 .sidemenu a {
-    display: block;
-    font-family: -apple-system, Roboto, Arial, sans-serif;
-    margin-bottom: 10px;
-    color: white;
-    text-decoration: none;
+  display: block;
+  margin-bottom: 10px;
+  color: white;
+  text-decoration: none;
 }
 
 .sidemenu a:hover {
-    color: violet;
+  color: violet;
 }
 
+/* Content styles */
 .content {
-    flex: 4;
-    font-family: -apple-system, Roboto, Arial, sans-serif;
-    text-align: left;
-    color: white;
-    background-color: #000;
-    /* Add this line to center the text inside the content column */
-    padding-left: 10%;
-    padding-right: 10%;
-    transition: transform 0.3s ease-in-out;
-    transform: translateX(0);
+  flex: 4;
+  font-family: -apple-system, Roboto, Arial, sans-serif;
+  color: white;
+  background-color: #000;
+  padding: 0 10%;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(0);
 }
 
 .content a {
-    color: violet;
-    text-decoration: none;
+  color: violet;
+  text-decoration: none;
 }
 
 .content code {
-    background-color: #2e2e2e;
-    border-radius: 5px;
-    padding: 2px;
+  background-color: #2e2e2e;
+  border-radius: 5px;
+  padding: 2px;
 }
 
+/* Warning banner styles */
 .warning-banner {
   border: 1px solid #ffff00;
   border-radius: 5px;
@@ -141,146 +116,4 @@
 
 .warning-banner p {
   color: #fff;
-}
-
-#menuToggle
-{
-  display: block;
-  position: relative;
-  top: 50px;
-  left: 50px;
-  
-  z-index: 1;
-  
-  -webkit-user-select: none;
-  user-select: none;
-}
-
-#menuToggle a
-{
-  text-decoration: none;
-  color: white;
-  
-  transition: color 0.3s ease;
-}
-
-#menuToggle a:hover
-{
-  color: violet;
-}
-
-
-#menuToggle input
-{
-  display: block;
-  width: 40px;
-  height: 32px;
-  position: absolute;
-  top: -7px;
-  left: -5px;
-  
-  cursor: pointer;
-  
-  opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
-  
-  -webkit-touch-callout: none;
-}
-
-/*
- * Just a quick hamburger
- */
-#menuToggle span
-{
-  display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
-  position: relative;
-  
-  background: white;
-  border-radius: 3px;
-  
-  z-index: 1;
-  
-  transform-origin: 4px 0px;
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
-}
-
-#menuToggle span:first-child
-{
-  transform-origin: 0% 0%;
-}
-
-#menuToggle span:nth-last-child(2)
-{
-  transform-origin: 0% 100%;
-}
-
-/* 
- * Transform all the slices of hamburger
- * into a crossmark.
- */
-#menuToggle input:checked ~ span
-{
-  opacity: 1;
-  transform: rotate(45deg) translate(-2px, -1px);
-  background: white;
-}
-
-/*
- * But let's hide the middle one.
- */
-#menuToggle input:checked ~ span:nth-last-child(3)
-{
-  opacity: 0;
-  transform: rotate(0deg) scale(0.2, 0.2);
-}
-
-/*
- * Ohyeah and the last one should go the other direction
- */
-#menuToggle input:checked ~ span:nth-last-child(2)
-{
-  transform: rotate(-45deg) translate(0, -1px);
-}
-
-/*
- * Make this absolute positioned
- * at the top left of the screen
- */
-#menu
-{
-  position: absolute;
-  width: 150px;
-  margin: -100px 0 0 -50px;
-  padding: 50px;
-  padding-top: 125px;
-  
-  background: black;
-  list-style-type: none;
-  -webkit-font-smoothing: antialiased;
-  /* to stop flickering of text in safari */
-  
-  transform-origin: 0% 0%;
-  transform: translate(-100%, 0);
-  
-  transition: transform 0.3s cubic-bezier(0.77,0.2,0.05,1.0);
-}
-
-#menu li
-{
-  padding: 10px 0;
-  font-size: 16px;
-}
-
-/*
- * And let's slide it in from the left
- */
-#menuToggle input:checked ~ ul
-{
-  transform: none;
 }
