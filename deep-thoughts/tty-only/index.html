@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 
@@ -13,106 +12,156 @@
             <a href="/" style="color: #ee82ee">Home</a>
         </div>
         <div class="content">
-<h1
-id="getting-work-done-using-only-tty-a-journey-back-to-the-basics">Getting
-Work Done Using Only TTY: A Journey Back to the Basics</h1>
-<p>Picture this: It’s a sunny Sunday morning in 1990. You rise, brew a
-fresh cup of coffee, and settle in front of the family computer. With a
-flick of the power switch, the CRT monitor hums to life, degaussing into
-a shaky boot sequence. Lines of text scroll down the screen, and
-finally, the familiar prompt <code>C:\</code> awaits your command.</p>
-<p>Do you launch into a game of Doom, or dive into a favorite bulletin
-board? The choice is yours, and that nostalgia is palpable.</p>
-<p>This feeling of simplicity and raw interaction is what I aim to
-recapture—not in DOS, but with modern hardware.</p>
-<h2 id="my-linux-journey">My Linux Journey</h2>
-<p>I’ve been using Linux since the fateful day I burned a live CD of
-Ubuntu 7.04 and accidentally wiped out our family PC’s Windows
-partition. My distro preferences have evolved over the years: starting
-from <code>Ubuntu</code>, moving to <code>Debian</code>, and
-subsequently experimenting with <code>Arch</code>,
-<code>Slackware</code>, <code>Gentoo</code>, and finally settling on
-<code>Alpine</code>.</p>
-<p>In my journey, I’ve gravitated towards the teletype console, drawn to
-its rawness and simplicity. As a child, long before I could read, I was
-already navigating the family computer running DOS. By memorizing the
-key sequences, I could launch <code>DOOM.EXE</code> at the tender age of
-four.</p>
-<p>Fast forward to my teenage years, when I engaged in what I called
-“TTY weekends” on a modest mid-2000s HP laptop running Debian. It was a
-challenge, often requiring me to momentarily switch to a desktop
-environment for quick web lookups. Yet I thrived during those weekends,
-learning the ins and outs of Linux while my friends thought I’d gone off
-the deep end.</p>
-<p>Now, nearing my 30s and with different priorities, I find myself free
-to work in ways that suit me best.</p>
-<h2 id="my-setup">My Setup</h2>
-<p>Currently, I use a MacBook as my primary laptop, but I’ve also
-acquired a ThinkPad X230 for about £30, slightly modified with a USB-C
-charging port, upgraded RAM (from 4GB to 8GB), and a couple of SSDs.</p>
-<p>Running Alpine Linux—renowned for its lightweight design—I’ve
-automated my setup with a dotfiles installation script that configures
-my fish shell, Neovim, and essential programs. It’s a streamlined setup;
-if I need additional packages down the line, they can easily be
-installed as needed.</p>
-<h2 id="why-tty">Why TTY?</h2>
-<p>When using my “normie” laptop, I often find myself ensnared by two
-beasts: the web browser and the terminal. A staggering 90% of my work
-falls into these categories. Given this gravitational pull towards the
-terminal, I’ve grown accustomed to working within it. With Neovim as my
-editor and tmux for session management, I often question why I would
-waste precious CPU resources on rendering a modern UI.</p>
-<p>This setup allows my Alpine installation to occupy a mere 4GB, while
-my MacBook consumes over 300GB—enough space to fit my TTY configuration
-in 75 times! Working in this minimalistic environment brings a sense of
-zen; distractions evaporate, and simplicity reigns.</p>
-<p>If I want to check the time, I simply type <code>date</code>. To view
-my battery status, I run <code>batt</code>. My ThinkPad even includes an
-antenna toggle, which I often leave switched off, using Wi-Fi only when
-absolutely necessary.</p>
-<p>I feel a profound sense of control over my machine—no auto-updates,
-no distractions. When I’m finished working, I’m unlikely to succumb to
-YouTube rabbit holes; instead, I might tackle household chores.</p>
-<h2 id="the-tty-experience">The TTY Experience</h2>
-<p>Typically, I have 3-4 TTY sessions active simultaneously. I initiate
-<code>cmus</code> in the first to start some music, adjust sound levels
-via <code>alsamixer</code> in the second, and devote the remaining
-consoles to coding with Neovim and running commands as needed.</p>
-<h2 id="a-caveat-limitations">A Caveat: Limitations</h2>
-<p>It’s true that not everything translates smoothly to TTY. The browser
-can be a significant limitation. Think of it this way: complaining about
-lack of browsing capabilities in TTY is like going to the beach and
-lamenting the absence of museums. They serve different purposes.</p>
-<p>Fortunately, with today’s capabilities for LLMs, many common
-programming queries can be answered without a traditional web
-browser.</p>
-<h2 id="creating-custom-tools">Creating Custom Tools</h2>
-<p>Accessing my machine in this way is fulfilling, yet certain tasks
-have required me to create utilities to streamline my workflow. This
-harkens back to earlier computing days—if a tool didn’t exist, you made
-it yourself.</p>
-<h3 id="custom-tools-overview">Custom Tools Overview</h3>
-<ul>
-<li><p><strong>blctl - Backlight Control</strong><br />
-<a href="https://github.com/rwejlgaard/blctl">GitHub Link</a><br />
-A simple program to control screen brightness without a GUI.</p></li>
-<li><p><strong>batt - Battery Information</strong><br />
-<a href="https://github.com/rwejlgaard/batt">GitHub Link</a><br />
-Displays current battery percentage, charging status, and wattage
-in/out.</p></li>
-<li><p><strong>sai - Stream AI</strong><br />
-<a href="https://github.com/rwejlgaard/sai">GitHub Link</a><br />
-Used for integrating LLMs in a manner akin to <code>sed</code> or
-<code>awk</code>, allowing for simple prompts handling.</p></li>
-</ul>
-<h2 id="conclusion">Conclusion</h2>
-<p>I love this setup and challenge anyone reading to give it a go for
-just 24 hours. You might discover new facets of Linux, rethink your work
-habits, and cultivate patience. After setting everything up, take a
-moment to relish the peace and control.</p>
-<p>If this minimalist approach isn’t your cup of tea, and you prefer a
-more visual UI, that’s perfectly fine too. There are no judgments
-here—just a personal invitation to explore.</p>
-</div>
-</div>
+            <h1 id="getting-work-done-using-only-tty-a-journey-back-to-the-basics">Getting
+                Work Done Using Only TTY: A Journey Back to the Basics</h1>
+            <p>Picture this: It's a sunny Sunday morning in 1990. You rise, brew a
+                fresh cup of coffee, and settle in front of the family computer. With a
+                flick of the power switch, the CRT monitor hums to life, degaussing into
+                a shaky boot sequence. Lines of text scroll down the screen, and
+                finally, the familiar prompt <code>C:\</code> awaits your command.</p>
+            <p>Do you launch into a game of Doom, or dive into a favorite bulletin
+                board? The choice is yours, and that nostalgia is palpable.</p>
+            <p>This feeling of simplicity and raw interaction is what I aim to
+                recapture—not in DOS, but with modern hardware.</p>
+            <h2 id="my-linux-journey">My Linux Journey</h2>
+            <p>I've been using Linux since the fateful day I burned a live CD of
+                Ubuntu 7.04 and accidentally wiped out our family PC's Windows
+                partition. My distro preferences have evolved over the years: starting
+                from <code>Ubuntu</code>, moving to <code>Debian</code>, and
+                subsequently experimenting with <code>Arch</code>,
+                <code>Slackware</code>, <code>Gentoo</code>, and finally settling on
+                <code>Alpine</code>.
+            </p>
+            <p>In my journey, I've gravitated towards the teletype console, drawn to
+                its rawness and simplicity. As a child, long before I could read, I was
+                already navigating the family computer running DOS. By memorizing the
+                key sequences, I could launch <code>DOOM.EXE</code> at the tender age of
+                four.</p>
+            <p>Fast forward to my teenage years, when I engaged in what I called
+                "TTY weekends" on a modest mid-2000s HP laptop running Debian. It was a
+                challenge, often requiring me to momentarily switch to a desktop
+                environment for quick web lookups. Yet I thrived during those weekends,
+                learning the ins and outs of Linux while my friends thought I'd gone off
+                the deep end.</p>
+            <p>Now, nearing my 30s and with different priorities, I find myself free
+                to work in ways that suit me best.</p>
+            <h2 id="my-setup">My Setup</h2>
+            <p>Currently, I use a MacBook as my primary laptop, but I've also
+                acquired a ThinkPad X230 for about £30, slightly modified with a USB-C
+                charging port, upgraded RAM (from 4GB to 8GB), and a couple of SSDs.</p>
+            <p>Running Alpine Linux—renowned for its lightweight design—I've
+                automated my setup with a dotfiles installation script that configures
+                my fish shell, Neovim, and essential programs. It's a streamlined setup;
+                if I need additional packages down the line, they can easily be
+                installed as needed.</p>
+            <h2 id="why-tty">Why TTY?</h2>
+            <p>When using my "normie" laptop, I often find myself ensnared by two
+                beasts: the web browser and the terminal. A staggering 90% of my work
+                falls into these categories. Given this gravitational pull towards the
+                terminal, I've grown accustomed to working within it. With Neovim as my
+                editor and tmux for session management, I often question why I would
+                waste precious CPU resources on rendering a modern UI.</p>
+            <p>This setup allows my Alpine installation to occupy a mere 4GB, while
+                my MacBook consumes over 300GB—enough space to fit my TTY configuration
+                in 75 times! Working in this minimalistic environment brings a sense of
+                zen; distractions evaporate, and simplicity reigns.</p>
+            <p>If I want to check the time, I simply type <code>date</code>. To view
+                my battery status, I run <code>batt</code>. My ThinkPad even includes an
+                antenna toggle, which I often leave switched off, using Wi-Fi only when
+                absolutely necessary.</p>
+            <p>I feel a profound sense of control over my machine—no auto-updates,
+                no distractions. When I'm finished working, I'm unlikely to succumb to
+                YouTube rabbit holes; instead, I might tackle household chores.</p>
+            <h2 id="the-tty-experience">The TTY Experience</h2>
+            <p>Typically, I have 3-4 TTY sessions active simultaneously. I initiate
+                <code>cmus</code> in the first to start some music, adjust sound levels
+                via <code>alsamixer</code> in the second, and devote the remaining
+                consoles to coding with Neovim and running commands as needed.
+            </p>
+            
+            <div class="image-grid">
+                <figure>
+                    <a href="images/cmus.png" target="_blank">
+                        <img src="images/cmus.png" alt="cmus music player interface" />
+                    </a>
+                    <figcaption>cmus - Terminal-based music player</figcaption>
+                </figure>
+                <figure>
+                    <a href="images/alsamixer.png" target="_blank">
+                        <img src="images/alsamixer.png" alt="alsamixer audio control interface" />
+                    </a>
+                    <figcaption>alsamixer - Audio control in TTY</figcaption>
+                </figure>
+                <figure>
+                    <a href="images/editing.png" target="_blank">
+                        <img src="images/editing.png" alt="neovim editing session" />
+                    </a>
+                    <figcaption>Neovim - Text editing in TTY</figcaption>
+                </figure>
+            </div>
+
+            <h2 id="a-caveat-limitations">A Caveat: Limitations</h2>
+            <p>It's true that not everything translates smoothly to TTY. The browser
+                can be a significant limitation. Think of it this way: complaining about
+                lack of browsing capabilities in TTY is like going to the beach and
+                lamenting the absence of museums. They serve different purposes.</p>
+            <p>Fortunately, with today's capabilities for LLMs, many common
+                programming queries can be answered without a traditional web
+                browser.</p>
+            <h2 id="creating-custom-tools">Creating Custom Tools</h2>
+            <p>Accessing my machine in this way is fulfilling, yet certain tasks
+                have required me to create utilities to streamline my workflow. This
+                harkens back to earlier computing days—if a tool didn't exist, you made
+                it yourself.</p>
+            <h3 id="custom-tools-overview">Custom Tools Overview</h3>
+            <ul>
+                <li>
+                    <p><strong>blctl - Backlight Control</strong><br />
+                        <a href="https://github.com/rwejlgaard/blctl">GitHub Link</a><br />
+                        A simple program to control screen brightness without a GUI.
+                        <figure>
+                            <a href="images/blctl.png" target="_blank">
+                                <img src="images/blctl.png" alt="blctl backlight control utility" />
+                            </a>
+                            <figcaption>blctl in action - controlling screen brightness</figcaption>
+                        </figure>
+                    </p>
+                </li>
+                <li>
+                    <p><strong>batt - Battery Information</strong><br />
+                        <a href="https://github.com/rwejlgaard/batt">GitHub Link</a><br />
+                        Displays current battery percentage, charging status, and wattage
+                        in/out.
+                        <figure>
+                            <a href="images/batt.png" target="_blank">
+                                <img src="images/batt.png" alt="batt battery information utility" />
+                            </a>
+                            <figcaption>batt - displaying battery information</figcaption>
+                        </figure>
+                    </p>
+                </li>
+                <li>
+                    <p><strong>sai - Stream AI</strong><br />
+                        <a href="https://github.com/rwejlgaard/sai">GitHub Link</a><br />
+                        Used for integrating LLMs in a manner akin to <code>sed</code> or
+                        <code>awk</code>, allowing for simple prompts handling.
+                        <figure>
+                            <a href="images/sai.png" target="_blank">
+                                <img src="images/sai.png" alt="sai AI stream utility" />
+                            </a>
+                            <figcaption>sai - AI integration in the terminal</figcaption>
+                        </figure>
+                    </p>
+                </li>
+            </ul>
+            <h2 id="conclusion">Conclusion</h2>
+            <p>I love this setup and challenge anyone reading to give it a go for
+                just 24 hours. You might discover new facets of Linux, rethink your work
+                habits, and cultivate patience. After setting everything up, take a
+                moment to relish the peace and control.</p>
+            <p>If this minimalist approach isn't your cup of tea, and you prefer a
+                more visual UI, that's perfectly fine too. There are no judgments
+                here—just a personal invitation to explore.</p>
+        </div>
+    </div>
 </body>

@@ -179,3 +179,65 @@
   content: "›";
   margin: 0 0.5rem;
 }
+
+/* Image styling */
+.image-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin: 2rem 0;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .image-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+figure {
+    margin: 1rem 0;
+    text-align: center;
+    width: 100%;
+}
+
+figure a {
+    display: block;
+    cursor: zoom-in;
+    transition: transform 0.2s ease;
+}
+
+figure a:hover {
+    transform: scale(1.02);
+}
+
+figure a:hover img {
+    border-color: #ee82ee;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #333;
+    border-radius: 4px;
+    display: block;
+    margin: 0 auto;
+    transition: border-color 0.2s ease;
+}
+
+figcaption {
+    margin-top: 0.5rem;
+    font-style: italic;
+    color: #666;
+    padding: 0 1rem;
+}
+
+/* For images inside list items */
+li figure {
+    margin: 1rem 0;
+}
+
+li img {
+    max-width: 100%;
+    height: auto;
+}
