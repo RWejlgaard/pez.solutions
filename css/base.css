@@ -348,3 +348,74 @@ li img {
     background-position: -200% 0;
   }
 }
+
+/* Documentation section styling */
+.sidemenu .doc-section {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #444;
+}
+
+.sidemenu .doc-header {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.sidemenu .doc-category {
+    color: #ccc;
+    font-size: 13px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.sidemenu .doc-category:first-child {
+    margin-top: 0;
+}
+
+.sidemenu .doc-links {
+    margin-left: 5px;
+}
+
+.sidemenu .doc-links a {
+    font-size: 12px;
+    color: #aaa;
+    display: block;
+    margin-bottom: 3px;
+    text-decoration: none;
+}
+
+.sidemenu .doc-links a:hover {
+    color: #ddd;
+}
+
+/* Navigation section styling */
+.sidemenu .nav-section {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+}
+
+.sidemenu .nav-section:not(:last-child) {
+    border-bottom: 1px solid #333;
+}
+
+.sidemenu .nav-section:first-child {
+    border-bottom: 2px solid #444;
+}
+
+.sidemenu .nav-header {
+    color: #888;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    margin-top: 5px;
+}
+
+.sidemenu .nav-section a {
+    display: block;
+    margin-bottom: 5px;
+}
