@@ -329,3 +329,22 @@ li img {
     max-width: 100%;
     height: auto;
 }
+
+.rainbow-text {
+  background: linear-gradient(90deg, #ff0000, #ff7f00, #ffff00, #00ff00, violet, #8b00ff);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  animation: rainbow-text-animation 10s linear infinite;
+}
+
+@keyframes rainbow-text-animation {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
