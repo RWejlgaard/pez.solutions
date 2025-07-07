@@ -29,7 +29,6 @@ function generateGlobalMenu() {
             <div class="nav-header">Technical</div>
             <a href="/projects" ${isActive('/projects') ? 'style="color: violet"' : ''}>Projects</a>
             <a href="/rca" ${isActive('/rca') ? 'style="color: violet"' : ''}>Incidents</a>
-            <a href="/hidden-services" ${isActive('/hidden-services') ? 'style="color: violet"' : ''}>Hidden Services</a>
             <a href="/deep-thoughts" ${isActive('/deep-thoughts') ? 'style="color: violet"' : ''}>Deep Thoughts (Blog)</a>
         </div>
 
