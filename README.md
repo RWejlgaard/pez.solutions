@@ -8,9 +8,9 @@ This project is a static website built for Cloudflare Pages that showcases and p
 
 ## Key Features
 
-- **Media Streaming**: Plex and Jellyfin servers with content request system
-- **Cloud Storage**: Private cloud drive with 100GB free tier (Seafile-based)
-- **File Sharing**: Public file sharing capabilities
+- **Media Streaming**: Self-hosted media servers with content management
+- **Cloud Storage**: Private cloud drive with file synchronization
+- **File Sharing**: Secure file sharing capabilities
 - **Infrastructure Documentation**: Technical documentation and incident reports
 - **Service Status**: Real-time monitoring and incident tracking
 
@@ -19,7 +19,7 @@ This project is a static website built for Cloudflare Pages that showcases and p
 - **Frontend**: Static HTML/CSS/JavaScript
 - **Deployment**: Cloudflare Pages (via Wrangler)
 - **Infrastructure**: Multi-location homelab setup
-- **Storage Backend**: Seafile for cloud drive functionality
+- **Storage Backend**: Self-hosted storage solutions
 
 ## File Structure
 
@@ -60,10 +60,7 @@ This project is a static website built for Cloudflare Pages that showcases and p
 │
 ├── rca/                      # Root Cause Analysis reports
 │   ├── index.html            # Incident listing
-│   ├── 2024-06-13/          # Internet outage incident
-│   ├── 2024-04-30/          # ZFS pool degradation
-│   ├── 2024-04-19/          # ZFS pool suspension
-│   └── 2024-04-15/          # Historical incidents
+│   └── [YYYY-MM-DD]/        # Individual incident RCA reports
 │
 ├── deep-thoughts/
 │   ├── index.html            # Blog/thoughts section
@@ -76,24 +73,24 @@ This project is a static website built for Cloudflare Pages that showcases and p
 ## Services Overview
 
 ### Media Streaming
-- **Plex Media Server** (`plex.pez.sh`) - High-quality media streaming with transcoding
-- **Jellyfin Media Server** (`jellyfin.pez.sh`) - Open-source alternative media server
-- **Content Requests** (`request.pez.sh`) - System for requesting new media content
+- Self-hosted media servers with automatic transcoding
+- Content management and request systems
+- Multiple streaming platform support
 
 ### Cloud Storage
-- **Pez Drive** (`files.pez.sh`) - Seafile-based private cloud storage
-  - 100GB free tier
-  - Real-time synchronization
-  - File versioning and collaboration
-  - Cross-platform support (Windows, macOS, Linux, iOS, Android)
+- Private cloud storage with synchronization
+- File versioning and collaboration features
+- Cross-platform client support
+- Web-based file management interface
 
 ### File Sharing
-- **Public File Sharing** (`public.pez.solutions`) - Temporary file sharing service
+- Secure file sharing capabilities
+- Temporary and permanent sharing options
 
 ### Infrastructure Services
-- Multi-location setup (London & Copenhagen)
-- High availability with redundancy
-- Comprehensive monitoring and incident tracking
+- Multi-location setup for high availability
+- Redundant systems and monitoring
+- Comprehensive incident tracking and reporting
 
 ## Development
 
@@ -140,7 +137,7 @@ The site uses a dynamic navigation system (`global_menu.js`) that generates cons
 
 The `/docs` section contains comprehensive technical documentation including:
 - Infrastructure setup and architecture
-- Service-specific documentation (Plex, Jellyfin, Drive)
+- Service-specific documentation and guides
 - Service Level Objectives (SLO)
 - Operational procedures
 
@@ -150,7 +147,7 @@ The `/rca` (Root Cause Analysis) section tracks infrastructure incidents with de
 
 ## Support
 
-For inquiries or assistance: support@pez.solutions
+For inquiries or assistance, please refer to the contact information provided on the website.
 
 ## License
 
