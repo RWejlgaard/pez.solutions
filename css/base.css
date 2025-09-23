@@ -161,6 +161,26 @@
   background-color: rgba(238, 130, 238, 0.1);
 }
 
+.sidemenu .disabled {
+  display: block;
+  padding: 0.4rem 1.5rem;
+  color: #666 !important;
+  cursor: not-allowed;
+  opacity: 0.6;
+  line-height: 1.4;
+}
+
+.sidemenu .disabled:hover {
+  color: #666 !important;
+  background-color: transparent !important;
+}
+
+.sidemenu .menu-note {
+  font-size: 0.75rem;
+  color: violet;
+  /* font-style: italic; */
+}
+
 .sidemenu ul {
   list-style-type: none;
   padding: 0;
@@ -247,6 +267,36 @@
   gap: 0.5rem;
 }
 
+/* Sidemenu divider styles */
+.sidemenu-divider {
+  height: 1px;
+  background-color: #333;
+  margin: 0.75rem 1.5rem;
+}
+
+/* Sidemenu divider with text (section titles) */
+.sidemenu-divider:not(:empty) {
+  height: auto;
+  background-color: transparent;
+  padding: 0.5rem 0rem 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #8E8E93;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid #333;
+  margin: 1rem 1.5rem 0.5rem;
+}
+
+/* Override note styling within dividers */
+.sidemenu-divider .menu-note {
+  font-size: 0.65rem;
+  color: violet;
+  text-transform: none;
+  font-weight: normal;
+  letter-spacing: normal;
+}
+
 /* Add these new styles for navigation and structure */
 .nav-breadcrumb {
   font-size: 0.875rem;
@@ -320,6 +370,61 @@ figcaption {
     padding: 0 1rem;
 }
 
+/* List styling */
+.content ul,
+.content ol {
+    margin: 0rem 0;
+    padding-left: 2rem;
+}
+
+.content ul li,
+.content ol li {
+    margin: 0.0rem 0;
+    line-height: 1.6;
+}
+
+.content ul {
+    list-style: none;
+}
+
+.content ul li::before {
+    content: "•";
+    color: #ee82ee;
+    font-size: 1.2rem;
+    margin-right: 0.75rem;
+    margin-left: -1.5rem;
+}
+
+.content ol {
+    counter-reset: list-counter;
+}
+
+.content ol li {
+    counter-increment: list-counter;
+    list-style: none;
+    position: relative;
+}
+
+.content ol li::before {
+    content: counter(list-counter) ".";
+    color: #ee82ee;
+    font-weight: 500;
+    margin-right: 0.75rem;
+    margin-left: -2rem;
+    position: absolute;
+    width: 1.5rem;
+    text-align: right;
+}
+
+/* Nested lists */
+.content ul ul,
+.content ol ol,
+.content ul ol,
+.content ol ul {
+    margin: 0.25rem 0;
+    padding-left: 1.5rem;
+}
+
 /* For images inside list items */
 li figure {
     margin: 1rem 0;
@@ -347,75 +452,4 @@ li img {
   100% {
     background-position: -200% 0;
   }
-}
-
-/* Documentation section styling */
-.sidemenu .doc-section {
-    margin-top: 20px;
-    padding-top: 15px;
-    border-top: 1px solid #444;
-}
-
-.sidemenu .doc-header {
-    color: #888;
-    font-size: 14px;
-    margin-bottom: 10px;
-    font-weight: bold;
-}
-
-.sidemenu .doc-category {
-    color: #ccc;
-    font-size: 13px;
-    margin-bottom: 5px;
-    margin-left: 10px;
-    margin-top: 10px;
-}
-
-.sidemenu .doc-category:first-child {
-    margin-top: 0;
-}
-
-.sidemenu .doc-links {
-    margin-left: 5px;
-}
-
-.sidemenu .doc-links a {
-    font-size: 12px;
-    color: #aaa;
-    display: block;
-    margin-bottom: 3px;
-    text-decoration: none;
-}
-
-.sidemenu .doc-links a:hover {
-    color: #ddd;
-}
-
-/* Navigation section styling */
-.sidemenu .nav-section {
-    margin-bottom: 20px;
-    padding-bottom: 15px;
-}
-
-.sidemenu .nav-section:not(:last-child) {
-    border-bottom: 1px solid #333;
-}
-
-.sidemenu .nav-section:first-child {
-    border-bottom: 2px solid #444;
-}
-
-.sidemenu .nav-header {
-    color: #888;
-    font-size: 12px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 8px;
-    margin-top: 5px;
-}
-
-.sidemenu .nav-section a {
-    display: block;
-    margin-bottom: 5px;
 }
