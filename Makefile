@@ -1,2 +1,0 @@
-debug:
-	wrangler pages dev .
