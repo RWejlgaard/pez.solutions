@@ -1,0 +1,36 @@
+---
+const links = [
+  { href: "https://updawg.net", label: "updawg.net" },
+  { href: "https://updawg.net/terms/", label: "Terms" },
+  { href: "https://updawg.net/privacy/", label: "Privacy" },
+  { href: "https://updawg.net/security/", label: "Security" },
+];
+---
+
+<footer class="border-t border-border">
+  <div class="mx-auto flex max-w-5xl flex-col gap-4 px-5 py-8 text-sm text-subtle sm:px-8">
+    <div class="flex flex-wrap items-center gap-x-6 gap-y-2">
+      <span>© {new Date().getFullYear()} Pez Solutions Ltd</span>
+      <a
+        class="font-mono underline underline-offset-4 hover:text-text"
+        href="mailto:hello@updawg.net"
+      >
+        hello@updawg.net
+      </a>
+      {links.map((l) => (
+        <a class="underline underline-offset-4 hover:text-text" href={l.href}>
+          {l.label}
+        </a>
+      ))}
+    </div>
+    {/*
+      The disclosures a UK company's website must carry: registered name, part
+      of the UK it is registered in, company number and registered office.
+    */}
+    <p class="text-xs">
+      Pez Solutions Ltd, registered in England and Wales, company number
+      17515727. Registered office: 167-169 Great Portland Street, 5th Floor,
+      London W1W 5PF. This site sets no cookies and runs no analytics.
+    </p>
+  </div>
+</footer>

@@ -1,0 +1,62 @@
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+
+jobs:
+  build:
+    name: format, check, build, deploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+
+      - run: npm ci
+
+      - name: prettier
+        run: npm run format:check
+
+      - name: astro check
+        run: npm run check
+
+      - name: build
+        run: npm run build
+
+      # Same rule as updawg.net: the site ships no JavaScript.
+      - name: assert no JavaScript is shipped
+        run: |
+          if grep -l '<script' $(find dist -name '*.html'); then
+            echo "A page above contains a <script> tag; this site ships no JS."
+            exit 1
+          fi
+          echo "No script tags."
+
+      # Astro's HTML compression drops the line break between a word and an
+      # inline tag on the next line. Write {" "} at the end of the line instead.
+      - name: assert words are not glued to links or bold text
+        run: |
+          pattern='[A-Za-z0-9,;:.)]<(a|strong|em|code)[ >]|</(a|strong|em|code)>[A-Za-z0-9(]'
+          if grep -o -E ".{25}($pattern).{25}" $(find dist -name '*.html'); then
+            echo "Missing space next to an inline tag (above). Add {\" \"} at the end of the source line."
+            exit 1
+          fi
+          echo "No glued words."
+
+      # Caddy on helsinki-a serves /srv/pez.solutions as plain files. --delete
+      # keeps it an exact copy of dist/, so nothing outside the build is served.
+      - name: deploy to helsinki-a
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        env:
+          SSH_KEY: ${{ secrets.SSH_KEY }}
+        run: |
+          echo "$SSH_KEY" | base64 -d > "$RUNNER_TEMP/id"
+          chmod 600 "$RUNNER_TEMP/id"
+          rsync -rlz --delete --chmod=D755,F644 \
+            -e "ssh -i $RUNNER_TEMP/id -o StrictHostKeyChecking=accept-new" \
+            dist/ root@helsinki-a.pez.sh:/srv/pez.solutions/
