@@ -1,6 +1,4 @@
-.git
-.github
-.gitignore
-Dockerfile
-.dockerignore
-Makefile
+node_modules/
+dist/
+.astro/
+.git/

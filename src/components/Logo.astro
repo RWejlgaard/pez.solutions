@@ -1,0 +1,23 @@
+---
+/*
+ * The Pez Solutions mark: a "P" on a tile, the same shape and margin as the
+ * Updawg tile. It is in the text colour, not brand violet, because violet is
+ * only ever interactive (see global.css) and the company mark is not a button.
+ */
+interface Props {
+  class?: string;
+}
+const { class: className = "size-6" } = Astro.props;
+---
+
+<svg viewBox="0 0 24 24" class={`shrink-0 ${className}`} aria-hidden="true">
+  <rect x="0" y="0" width="24" height="24" rx="6" fill="var(--text)"></rect>
+  <path
+    d="M8.5 18V6h4.25a3.75 3.75 0 0 1 0 7.5H8.5"
+    fill="none"
+    stroke="var(--bg)"
+    stroke-width="2.25"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  ></path>
+</svg>

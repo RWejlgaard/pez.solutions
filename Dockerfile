@@ -1,7 +1,11 @@
+FROM node:24-alpine AS build
+WORKDIR /src
+COPY package.json package-lock.json ./
+RUN npm ci
+COPY . .
+RUN npm run build
+
 FROM nginx:1.27-alpine
-
-COPY . /usr/share/nginx/html
+COPY --from=build /src/dist /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/conf.d/default.conf
-RUN rm -f /usr/share/nginx/html/nginx.conf
-
 EXPOSE 8080
